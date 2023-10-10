@@ -1,0 +1,18 @@
+﻿Picked below values from http://art-decor.org/decor/services/RetrieveValueSet?id=2.16.840.1.113883.3.88.12.3221.6.8&effectiveDate=2013-01-31T00:00:00&prefix=ccda-&format=html&collapsable=true&language=en-US
+	255604002
+	371923003
+	6736007
+	371924009
+	24484000
+	399166001
+
+Picked below values from http://art-decor.org/decor/services/RetrieveValueSet?id=2.16.840.1.113883.3.88.12.80.60&effectiveDate=2008-12-18T00:00:00&prefix=ccda-&format=html&language=en-US
+	229819007
+	256235009
+	160573003
+	364393001
+	364703007
+	425400000
+	363908000
+	228272008
+	105421008

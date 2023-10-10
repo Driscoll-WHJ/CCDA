@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\DCH8220\Downloads\CCDA.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78F66C65-66CD-418B-9A32-8928E98EB8EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>CCDA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>3.0.0.4</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>CCDA</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCDA.cs" />
+    <Compile Include="PatientRole.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="DocumentationOf.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="ResultObs.cs" />
+    <Compile Include="Laborders.cs" />
+    <Compile Include="Performer.cs" />
+    <Compile Include="AssignedEntity.cs" />
+    <Compile Include="FunctionalStatus.cs" />
+    <Compile Include="Referral.cs" />
+    <Compile Include="ComponentOf.cs" />
+    <Compile Include="EncounterDiagnosis.cs" />
+    <Compile Include="Encounter.cs" />
+    <Compile Include="Medication.cs" />
+    <Compile Include="Procedure.cs" />
+    <Compile Include="SocialHistory.cs" />
+    <Compile Include="VitalSign.cs" />
+    <Compile Include="VitalSignObs.cs" />
+    <Compile Include="MedicalHistory.cs" />
+    <Compile Include="FamilyHistory.cs" />
+    <Compile Include="PrivacyMarkings.cs" />
+    <Compile Include="Problem.cs" />
+    <Compile Include="CarePlan.cs" />
+    <Compile Include="Goal.cs" />
+    <Compile Include="ClinicalNoteType.cs" />
+    <Compile Include="ClinicalNote.cs" />
+    <Compile Include="HealthConcern.cs" />
+    <Compile Include="HealthStatus.cs" />
+    <Compile Include="Assesment.cs" />
+    <Compile Include="Instructions.cs" />
+    <Compile Include="MedicationSupply.cs" />
+    <Compile Include="ManufacturedMaterial.cs" />
+    <Compile Include="Immunization.cs" />
+    <Compile Include="Allergy.cs" />
+    <Compile Include="Author.cs" />
+    <Compile Include="DataEnterer.cs" />
+    <Compile Include="Informant.cs" />
+    <Compile Include="InformationRecepient.cs" />
+    <Compile Include="Participant.cs" />
+    <Compile Include="AssignedPerson.cs" />
+    <Compile Include="Address.cs" />
+    <Compile Include="StringWriterWithEncoding.cs" />
+    <Compile Include="CCDAParser.cs" />
+    <Compile Include="XDMFilesPulled.cs" />
+    <Compile Include="XDMParser.cs" />
+    <Compile Include="CCDValidator\ValidatorResult.cs" />
+    <Compile Include="CCDValidator\ValidatorNew.cs" />
+    <Compile Include="Validator\CommonHelper.cs" />
+    <Compile Include="Validator\ResultSeverity.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="C32.xsl" />
+    <EmbeddedResource Include="CCDA.xsl" />
+    <EmbeddedResource Include="CCDA_ReferralNote.xsl" />
+    <EmbeddedResource Include="CCDAAPI.xsl" />
+    <EmbeddedResource Include="CCR.xsl" />
+    <EmbeddedResource Include="CDA.xsl" />
+    <EmbeddedResource Include="cda_styles.css" />
+    <EmbeddedResource Include="CDAHTML.xsl" />
+    <EmbeddedResource Include="Validator\CCDTemplates\CCD_r11_v1.xml" />
+    <EmbeddedResource Include="Validator\CCDTemplates\CCD_Validator_Template.xml" />
+    <EmbeddedResource Include="Validator\Data\administrationunitcode.txt" />
+    <EmbeddedResource Include="Validator\Data\alltemplateids.txt" />
+    <EmbeddedResource Include="Validator\Data\cvx.txt" />
+    <EmbeddedResource Include="Validator\Data\DeletedCodesFromSnomed.txt" />
+    <EmbeddedResource Include="Validator\Data\EncounterCPTCodes.txt" />
+    <EmbeddedResource Include="Validator\Data\icd10.txt" />
+    <EmbeddedResource Include="Validator\Data\LanguageCodes.txt" />
+    <EmbeddedResource Include="Validator\Data\loinc.txt" />
+    <EmbeddedResource Include="Validator\Data\rxnorm.txt" />
+    <EmbeddedResource Include="Validator\Data\Snomed.txt" />
+    <EmbeddedResource Include="Validator\Data\Units.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

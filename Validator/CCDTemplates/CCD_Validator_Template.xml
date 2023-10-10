@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <possiblevalueseparator>##$$##</possiblevalueseparator>
+  <nsplaceholder>##NSPLACHR##</nsplaceholder>
+  <componentsection>
+
+    <!-- Allergy -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.6.1" displayname="Allergy and intolerances">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="48765-2"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.30"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/code/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.30"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" possiblevalues="48765-2##$$##CONC"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1##$$##2.16.840.1.113883.5.6"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.7"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/value/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.7"></attrib>
+        </additonalcheck>
+
+        <!-- following possible values are taken from http://ccda.art-decor.org/ccda-html-20150727T182455/voc-2.16.840.1.113883.3.88.12.3221.6.2-2013-01-31T000000.html -->
+        <attrib name="code" possiblevalues="419199007##$$##419511003##$$##416098002##$$##59037007##$$##414285001##$$##235719002##$$##420134006##$$##419511003##$$##418471000##$$##418038007##$$##232347008##$$##426232007"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/participant/participantRole/playingEntity/code/">
+
+        <additonalcheck nodelevelup="4" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.7"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.88">CCDA.Validator.Data.rxnorm.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.88"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/entryRelationship/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.7##$$##2.16.840.1.113883.10.20.22.4.9##$$##2.16.840.1.113883.10.20.22.4.28##$$##2.16.840.1.113883.10.20.22.4.8"></attrib>
+      </node>
+
+
+      <node xpathname="/entry/act/entryRelationship/observation/entryRelationship/observation/value/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.7##$$##2.16.840.1.113883.10.20.22.4.9"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" possiblevalues="57676002##$$##43724002##$$##49727002##$$##386661006##$$##25064002##$$##247472004##$$##271795006##$$##68962001##$$##68235000##$$##95388000##$$##271807003##$$##64531003##$$##267036007##$$##162397003##$$##65124004##$$##419199007##$$##419511003"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/entryRelationship/observation/value/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.8"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" possiblevalues="399166001##$$##255604002##$$##371923003##$$##6736007##$$##371924009##$$##24484000##$$##"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+
+      </node>
+
+      <!--<node xpathname="/entry/act/entryRelationship/observation/entryRelationship/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.8##$$##"></attrib>
+      </node>-->
+
+    </node>
+    <!-- Allergy -->
+
+    <!-- Goals -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.60" displayname="Goals Section" >
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="61146-7"></attrib>
+      </node>
+
+      <node xpathname="/entry/observation/templateId/" nodereq="yes" displayname="Goal Section Observation">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.121"></attrib>
+      </node>
+
+      <!--<node xpathname="/entry/observation/" nodereq="yes" displayname="Goal Section Observation">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.121"></attrib>
+      </node>-->
+
+    </node>
+    <!-- Goals -->
+
+    <!-- RESULTS -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.3.1" displayname="Lab results section">
+
+      <node xpathname="/entry/organizer/component/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.2"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.2##$$##2.16.840.1.113883.10.20.22.4.1"></attrib>
+        </additonalcheck>
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/code/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.1"></attrib>
+        </additonalcheck>
+
+        <additonalcheck nodelevelup="0" nodename="code">
+          <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##2.16.840.1.113883.6.1"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##2.16.840.1.113883.6.1"></attrib>
+      </node>
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="30954-2"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.2"></attrib>
+        </additonalcheck>
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/value/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.2"></attrib>
+        </additonalcheck>
+        <attrib name="unit" dofilelookup="yes" attribreq="no" possiblevalues="">
+          <filename>CCDA.Validator.Data.Units.txt</filename>
+        </attrib>
+      </node>
+
+
+    </node>
+    <!-- RESULTS -->
+
+    <!-- Assessment -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.8" displayname="Assesment Section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="51848-0"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1"></attrib>
+      </node>
+
+    </node>
+    <!-- Assessment -->
+
+    <!-- Encounters -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.22.1" displayname="Encounter section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="46240-8"></attrib>
+      </node>
+
+      <node xpathname="/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.2.22.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/entryRelationship/act/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.80##$$##2.16.840.1.113883.10.20.22.4.19"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.49"></attrib>
+        </additonalcheck>
+
+        <additonalcheck nodelevelup="0" nodename="code">
+          <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.12"></attrib>
+        </additonalcheck>
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.12">CCDA.Validator.Data.EncounterCPTCodes.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.12##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.49"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/entryRelationship/act/entryRelationship/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.4"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/entryRelationship/act/entryRelationship/observation/code/">
+        <attrib name="code" possiblevalues="409586006##$$##404684003"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/entryRelationship/act/entryRelationship/observation/value/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.4"></attrib>
+        </additonalcheck>
+        <additonalcheck nodelevelup="0" nodename="value">
+          <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##2.16.840.1.113883.6.90"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+          <filename codeSystem="2.16.840.1.113883.6.90">CCDA.Validator.Data.icd10.txt</filename>
+        </attrib><!--Mahesh:Need to add multiple files-->
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##2.16.840.1.113883.6.90"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/participant/participantRole/code/">
+        <attrib name="code" possiblevalues="1160-1##$$##1117-1"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.259"></attrib>
+      </node>
+
+      <node xpathname="/entry/encounter/entryRelationship/act/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.80"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+        <!--<attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1"></attrib>-->
+      </node>
+
+
+    </node>
+    <!-- Encounters -->
+
+    <!-- IMMUNIZATIONS -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.2.1" displayname="Immunization section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="11369-6"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.52"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/routeCode/">
+        <attrib name="code" possiblevalues="C38238##$$##C28161##$$##C38276##$$##C38284##$$##C38288##$$##OTH##$$##C38676##$$##C38299##$$##C38305##$$##C38216"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.3.26.1.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/consumable/manufacturedProduct/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.54"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/consumable/manufacturedProduct/manufacturedMaterial/code/">
+        <!--<attrib name="code" possiblevalues="998##$$##99##$$##999##$$##143##$$##54##$$##55##$$##82##$$##24##$$##181##$$##801##$$##19##$$##27##$$##173##$$##174##$$##26##$$##172##$$##29##$$##56##$$##12##$$##28##$$##20##$$##106##$$##107##$$##146##$$##170##$$##110##$$##50##$$##120##$$##130##$$##132##$$##01##$$##22##$$##102##$$##57##$$##30##$$##52##$$##154##$$##169##$$##83##$$##84##$$##31##$$##85##$$##104##$$##08##$$##42##$$##43##$$##44##$$##45##$$##58##$$##59##$$##60##$$##47##$$##46##$$##49##$$##48##$$##17##$$##51##$$##61##$$##118##$$##62##$$##137##$$##165##$$##86##$$##14##$$##87##$$##160##$$##151##$$##123##$$##135##$$##153##$$##171##$$##158##$$##150##$$##161##$$##166##$$##111##$$##149##$$##155##$$##141##$$##140##$$##144##$$##15##$$##168##$$##88##$$##16##$$##10##$$##134##$$##39##$$##129##$$##63##$$##64##$$##65##$$##66##$$##04##$$##67##$$##05##$$##68##$$##108##$$##163##$$##162##$$##164##$$##103##$$##148##$$##147##$$##136##$$##114##$$##32##$$##167##$$##03##$$##94##$$##07##$$##127##$$##128##$$##125##$$##126##$$##02##$$##179##$$##178##$$##182##$$##69##$$##177##$$##11##$$##23##$$##133##$$##100##$$##152##$$##33##$$##109##$$##89##$$##70##$$##175##$$##176##$$##40##$$##18##$$##90##$$##72##$$##159##$$##157##$$##156##$$##73##$$##34##$$##119##$$##116##$$##74##$$##122##$$##71##$$##93##$$##145##$$##06##$$##38##$$##76##$$##138##$$##113##$$##09##$$##139##$$##115##$$##180##$$##35##$$##142##$$##112##$$##77##$$##13##$$##98##$$##95##$$##96##$$##97##$$##78##$$##25##$$##41##$$##53##$$##91##$$##101##$$##131##$$##75##$$##105##$$##79##$$##21##$$##81##$$##80##$$##92##$$##36##$$##117##$$##37##$$##183##$$##184##$$##121##$$##"></attrib>-->
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.12.292">CCDA.Validator.Data.cvx.txt</filename>
+          <filename codeSystem="2.16.840.1.113883.6.59">CCDA.Validator.Data.cvx.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.59##$$##2.16.840.1.113883.12.292"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/administrationUnitCode/">
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.3.26.1.1"></attrib>
+      </node>
+
+    </node>
+    <!-- IMMUNIZATIONS -->
+
+    <!-- Medications -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.1.1" displayname="Medication section">
+
+      <node xpathname="/entry/substanceAdministration/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.16"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/routeCode/">
+        <attrib name="code" possiblevalues="C38238##$$##C28161##$$##C38276##$$##C38284##$$##C38288##$$##OTH##$$##C38676##$$##C38299##$$##C38305##$$##C38216"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.3.26.1.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/administrationUnitCode/">
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.3.26.1.1">CCDA.Validator.Data.administrationunitcode.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.3.26.1.1"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/consumable/manufacturedProduct/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.23"></attrib>
+      </node>
+
+      <node xpathname="/entry/substanceAdministration/consumable/manufacturedProduct/manufacturedMaterial/code/">
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.88">CCDA.Validator.Data.rxnorm.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.88"></attrib>
+      </node>
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="10160-0"></attrib>
+      </node>
+
+      <!--<node xpathname="/entry/substanceAdministration/consumable/manufacturedProduct/manufacturedMaterial/code/">
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.12.292"></attrib>        
+      </node>-->
+
+    </node>
+    <!-- Medications -->
+
+    <!-- PROBLEM -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.5.1" displayname="Problem section">
+
+      <node xpathname="/entry/act/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.3"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/code/">
+        <attrib name="code" possiblevalues="CONC"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.5.6"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.4##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/code/">
+
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.4"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="no" possiblevalues="29308##$$##404684003##$$##409586006##$$##282291009##$$##64572001##$$##248536006##$$##418799008##$$##55607006##$$##373930000">
+          <!--<filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>-->
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/entryRelationship/observation/value/">
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+        </attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+      </node>
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="11450-4"></attrib>
+      </node>
+
+    </node>
+    <!-- PROBLEM -->
+
+    <!-- VITALS -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.4.1" displayname="Vitals section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="8716-3"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.26##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/code/">
+        <attrib name="code" possiblevalues="46680005"></attrib>
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.96##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.27##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/code/">
+        <!--<attrib name="code" possiblevalues="8302-2##$$##8480-6##$$##3141-9##$$##8462-4##$$##8867-4##$$##2710-2##$$##29463-7"></attrib>-->
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+
+        <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.1##$$##"></attrib>
+      </node>
+
+      <node xpathname="/entry/organizer/component/observation/value/">
+        <attrib name="unit" dofilelookup="yes" attribreq="no" possiblevalues="">
+          <filename>CCDA.Validator.Data.Units.txt</filename>
+        </attrib>
+      </node>
+
+    </node>
+    <!-- VITALS -->
+
+    <!-- Health Concern -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.58" displayname="Health Concern section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="75310-3"></attrib>
+      </node>
+
+      <node xpathname="/entry/act/templateId/" nodereq="yes" displayname="Health Concern Act">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.132"></attrib>
+      </node>
+
+    </node>
+    <!-- Health Concern -->
+
+    <!-- Health Status -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.61" displayname="Health Concerns section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="11383-7"></attrib>
+      </node>
+
+    </node>
+    <!-- Health Status -->
+
+    <!-- Interventions -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.21.2.3" displayname="Interventions section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="62387-6"></attrib>
+      </node>
+
+    </node>
+    <!-- Interventions -->
+
+    <!-- Procedures -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.7.1" displayname="Procedures section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="47519-4"></attrib>
+      </node>
+
+      <node xpathname="/entry/procedure/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.14"></attrib>
+      </node>
+
+      <node xpathname="/entry/procedure/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.14"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+          <filename codeSystem="2.16.840.1.113883.6.12">CCDA.Validator.Data.EncounterCPTCodes.txt</filename>
+        </attrib>
+      </node>
+
+
+      <node xpathname="/entry/procedure/targetSiteCode/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.14"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="" attribreq="no">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+          <!--<filename codeSystem="2.16.840.1.113883.6.12">CCDA.Validator.Data.EncounterCPTCodes.txt</filename>-->
+        </attrib>
+      </node>
+      
+
+    </node>
+    <!-- Procedures -->
+
+    <!-- Social History -->
+    <node xpathname="ClinicalDocument/component/structuredBody/component/section" templateid="2.16.840.1.113883.10.20.22.2.17" displayname="Social History section">
+
+      <node xpathname="/code/">
+        <attrib name="code" possiblevalues="29762-2"></attrib>
+      </node>
+
+      <node xpathname="/entry/observation/templateId/">
+        <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.85##$$##2.16.840.1.113883.10.20.22.4.78##$$##2.16.840.1.113883.10.20.22.4.38##$$##2.16.840.1.113883.10.20.22.4.200"></attrib>
+      </node>
+
+      <node xpathname="/entry/observation/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.78"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+      </node>
+
+      <node xpathname="/entry/observation/code/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.85"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.1">CCDA.Validator.Data.loinc.txt</filename>
+        </attrib>
+      </node>
+
+      <node xpathname="/entry/observation/value/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.78"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+        </attrib>
+      </node>
+
+      <node xpathname="/entry/observation/value/">
+        <additonalcheck nodelevelup="1" nodename="templateId">
+          <attrib name="root" possiblevalues="2.16.840.1.113883.10.20.22.4.85"></attrib>
+        </additonalcheck>
+
+        <attrib name="code" dofilelookup="yes" possiblevalues="">
+          <filename codeSystem="2.16.840.1.113883.6.96">CCDA.Validator.Data.Snomed.txt</filename>
+        </attrib>
+      </node>
+
+    </node>
+    <!-- Social History -->
+
+  </componentsection>
+
+  <straight>
+
+    <!--<node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section[/##NSPLACHR##templateId/@root='2.16.840.1.113883.10.20.22.2.58']/##NSPLACHR##entry/##NSPLACHR##act" nodereq="no" nodevaluereq="no" displayname="Health Concern Act">
+        <attrib name="root" possiblevalues="##$$##2.16.840.1.113883.10.20.22.4.132" attribreq="no"></attrib>        
+      </node> 
+
+     <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section[/##NSPLACHR##templateId/@root='2.16.840.1.113883.10.20.22.2.60']/##NSPLACHR##entry/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no" displayname="Goal Section Observation">
+        <attrib name="root" possiblevalues="##$$##2.16.840.1.113883.10.20.22.4.121" attribreq="no"></attrib>        
+      </node>-->
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##confidentialityCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" possiblevalues="R##$$##V##$$##N" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##code" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" possiblevalues="34133-9##$$##52521-2##$$##57133-1##$$##18842-5" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##languageCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" dofilelookup="yes" possiblevalues="" attribreq="yes">
+        <filename>CCDA.Validator.Data.LanguageCodes.txt</filename>
+      </attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##templateId" nodereq="yes" nodevaluereq="no">
+      <attrib name="root" possiblevalues="2.16.840.1.113883.3.3251.1.1##$$##2.16.840.1.113883.10.20.22.1.8##$$##2.16.840.1.113883.10.20.22.1.2##$$##2.16.840.1.113883.10.20.22.1.1##$$##2.16.840.1.113883.10.20.22.1.15##$$##2.16.840.1.113883.10.20.22.1.14" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##typeId" nodereq="yes" nodevaluereq="no">
+      <attrib name="extension" possiblevalues="POCD_HD000040" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##ethnicGroupCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" possiblevalues="2186-5##$$##2135-2" attribreq="yes"></attrib>
+      <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.238##$$##" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##administrativeGenderCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" possiblevalues="M##$$##F" attribreq="yes"></attrib>
+      <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.5.1##$$##" attribreq="yes"></attrib>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##name/##NSPLACHR##given"
+          nodereq="no" nodevaluereq="yes">
+    </node>
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##name/##NSPLACHR##suffix"
+          nodereq="no" nodevaluereq="yes">
+    </node>
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##name/##NSPLACHR##family"
+          nodereq="yes" nodevaluereq="yes">
+    </node>
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##languageCommunication/##NSPLACHR##languageCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" dofilelookup="yes" possiblevalues="" attribreq="yes">
+        <filename>CCDA.Validator.Data.LanguageCodes.txt</filename>
+      </attrib>
+      <!--<attrib name="codeSystem" possiblevalues="2.16.840.1.113883.5.60##$$##" attribreq="no"></attrib>-->
+    </node>
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##name" nodereq="yes" nodevaluereq="no">
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##templateId" nodereq="yes" nodevaluereq="no">
+      <!--<attrib name="root" 
+                possiblevalues="2.16.840.1.113883.10.20.22.2.15##$$##2.16.840.1.113883.10.20.22.2.6.1##$$##2.16.840.1.113883.10.20.22.2.1.1##$$##2.16.840.1.113883.10.20.22.2.5.1##$$##2.16.840.1.113883.10.20.22.2.22.1##$$##2.16.840.1.113883.10.20.22.2.2.1##$$##2.16.840.1.113883.10.20.22.2.4.1##$$##2.16.840.1.113883.10.20.22.2.17##$$##2.16.840.1.113883.10.20.22.2.7.1##$$##2.16.840.1.113883.10.20.22.2.3.1##$$##2.16.840.1.113883.10.20.22.2.8##$$##2.16.840.1.113883.10.20.22.2.10##$$##2.16.840.1.113883.10.20.22.2.60##$$##2.16.840.1.113883.10.20.22.2.58##$$##1.3.6.1.4.1.19376.1.5.3.1.3.1##$$##2.16.840.1.113883.10.20.22.2.11.1##$$##2.16.840.1.113883.10.20.22.2.14##$$##2.16.840.1.113883.10.20.22.2.41##$$##2.16.840.1.113883.10.20.22.2.43##$$##2.16.840.1.113883.10.20.22.2.56##$$##2.16.840.1.113883.10.20.21.2.3##$$##2.16.840.1.113883.10.20.22.2.61" 
+                attribreq="yes">
+      </attrib>-->
+
+      <attrib name="root" attribreq="yes" dofilelookup="yes" possiblevalues="">
+        <filename>CCDA.Validator.Data.alltemplateids.txt</filename>
+      </attrib>
+
+    </node>
+
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##act" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##substanceAdministration/##NSPLACHR##consumable/##NSPLACHR##manufacturedProduct" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+        
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##substanceAdministration" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+      
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##act/##NSPLACHR##entryRelationship/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+      
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##act/##NSPLACHR##entryRelationship/##NSPLACHR##observation/##NSPLACHR##entryRelationship/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##encounter" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>    
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##encounter/##NSPLACHR##entryRelationship/##NSPLACHR##act" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>  
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>       
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##procedure" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##organizer" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>    
+    
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##organizer/##NSPLACHR##component/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>  
+    
+    <!--<node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##component/##NSPLACHR##structuredBody/##NSPLACHR##component/##NSPLACHR##section/##NSPLACHR##entry/##NSPLACHR##act/##NSPLACHR##entryRelationship/##NSPLACHR##observation" nodereq="yes" nodevaluereq="no">
+      <childnode name="templateId" nodereq="yes"></childnode>
+    </node>-->
+        
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##raceCode"
+          nodereq="yes" nodevaluereq="no">
+      <attrib name="code" possiblevalues="2106-3##$$##2131-1##$$##2076-8##$$##2054-5##$$##2028-9##$$##1002-5##$$##UNK" attribreq="yes"></attrib>
+      <attrib name="codeSystem" possiblevalues="2.16.840.1.113883.6.238##$$##" attribreq="yes"></attrib>
+    </node>
+    <node xpathname="/##NSPLACHR##ClinicalDocument/##NSPLACHR##recordTarget/##NSPLACHR##patientRole/##NSPLACHR##patient/##NSPLACHR##languageCommunication/##NSPLACHR##languageCode" nodereq="yes" nodevaluereq="no">
+      <attrib name="code" dofilelookup="yes" possiblevalues="" attribreq="yes">
+        <filename>CCDA.Validator.Data.LanguageCodes.txt</filename>
+      </attrib>
+      <attrib name="codeSystem" possiblevalues="maheshdabi##$$##" attribreq="no"></attrib>
+    </node>
+
+  </straight>
+
+
+  <backwardcompatibility>
+    <node name="templateId">
+      <attrib name="root" value="2.16.840.1.113883.10.20.22.4.80"></attrib>
+    </node>
+  </backwardcompatibility>
+  
+</settings>
+
